@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wish Page</title>
+    {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'exam/css/styles.css' %}"media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+    <div class="header">
+      <a href="/dashboard"><button>Home</button></a>
+      <a href="/logout"><button>Logout</button></a>
+
+    </div>
+    <h1>{{wish.item}}</h1>
+
+    <h4>Users who added this product/item under their wish list:</h4>
+
+    {% for wisher in wish_adders %}
+      <p>{{wisher.wish_adder.username}}</p>
+    {% endfor %}
+
+  </body>
+</html>

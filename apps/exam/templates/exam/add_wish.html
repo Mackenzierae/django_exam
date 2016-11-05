@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Wish</title>
+    {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'exam/css/styles.css' %}"media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="/dashboard"><button>Home</button></a>
+      <a href="/logout"><button>Logout</button></a>
+
+    </div>
+
+        {% if messages %}
+          {% for msg in messages %}
+            <h6 id="red">{{msg.message}}</h6>
+          {% endfor %}
+        {% endif %}
+
+    <h1>Create a New Wish List Item:</h1>
+    <form action="/add_wish" method="post">
+      {% csrf_token %}
+      <h3>Item/Product: <input type="text" name="item"></h3>
+      <h3><input type="submit" value="Add"></h3>
+
+    </form>
+
+  </body>
+</html>

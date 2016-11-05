@@ -1,0 +1,30 @@
+*{
+  font-family: helvetica;
+  color: grey;
+}
+
+
+th{
+  width: 200px;
+  text-align: left;
+  padding: 3px;
+}
+
+.top{
+  border: 1px dashed grey;
+  height: 250px;
+  width: 800px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+.bottom{
+  border: 1px dashed grey;
+  height: 250px;
+  width: 800px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+td{
+  padding: 2px;
+}
